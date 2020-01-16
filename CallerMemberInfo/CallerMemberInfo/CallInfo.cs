@@ -24,10 +24,10 @@ namespace CallerMemberInfo
             var method = frame.GetMethod();
             var declaringType = method.DeclaringType;
             
-            MemberName = declaringType.Name;
+            MemberName = method.Name;
             Namespace = declaringType.Namespace;
             MemberType = method.MemberType;
-            ClassName = method.Name;
+            ClassName = declaringType.Name;
         }
     }
 }
